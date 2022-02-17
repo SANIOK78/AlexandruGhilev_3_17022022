@@ -1,0 +1,448 @@
+*, *::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit; }
+
+body {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #000; }
+
+h1 {
+  font-size: 2.6rem;
+  font-family: 'Shrikhand', sans-serif; }
+
+h2 {
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif; }
+
+h3 {
+  font-size: 1.8rem;
+  font-family: 'Roboto', sans-serif; }
+
+p {
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif; }
+
+a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif; }
+
+.btn {
+  margin: 3rem auto;
+  padding: 1.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 50px;
+  border-style: none;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: all 0.3s ease-in-out; }
+  .btn:hover {
+    opacity: 0.9;
+    box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.4); }
+
+.container {
+  max-width: 1200px;
+  border: 2px solid black;
+  margin: 0px auto; }
+  @media (max-width: 992px) {
+    .container {
+      border: 1px solid green;
+      width: 100%; } }
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+      height: auto;
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column; } }
+
+.header {
+  width: 100%;
+  height: auto; }
+  .header--img {
+    width: 42%;
+    display: block;
+    margin: 20px auto; }
+    @media (min-width: 768px) {
+      .header--img {
+        width: 30%; } }
+
+.menu .img-menu {
+  width: 100%;
+  height: auto; }
+  .menu .img-menu img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; }
+.menu .details {
+  width: 100%;
+  height: auto;
+  background-color: whitesmoke;
+  border-radius: 5rem 5rem 0 0;
+  position: relative;
+  bottom: 5rem;
+  padding: 2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .menu .details__titre {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem 0; }
+    @media (min-width: 768px) {
+      .menu .details__titre {
+        padding: 2rem;
+        border-bottom: 3px solid #e6e6e6; } }
+    .menu .details__titre h1 {
+      font-size: 2.6rem;
+      font-family: 'Shrikhand', sans-serif; }
+    .menu .details__titre .fa-heart {
+      font-size: 2.5rem;
+      font-weight: 100; }
+  .menu .details__carte {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0; }
+    @media (min-width: 768px) {
+      .menu .details__carte {
+        display: flex;
+        justify-content: center;
+        margin: 1.2rem 0; } }
+    .menu .details__carte .choix-titre {
+      padding: 1.2rem; }
+      @media (min-width: 768px) {
+        .menu .details__carte .choix-titre {
+          width: 30%; } }
+      .menu .details__carte .choix-titre h2 {
+        font-size: 1.8rem;
+        font-weight: 100;
+        text-transform: uppercase; }
+      .menu .details__carte .choix-titre hr {
+        height: 0.4rem;
+        width: 5rem;
+        background-color: #99E2D0;
+        border-style: none;
+        margin-top: 0.5rem; }
+    .menu .details__carte .details-choix {
+      width: 100%;
+      height: auto; }
+      @media (min-width: 768px) {
+        .menu .details__carte .details-choix {
+          width: 60%; } }
+      .menu .details__carte .details-choix .choix {
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        padding: 1.2rem;
+        border-radius: 1.5rem;
+        margin: 1rem 0 1.5rem;
+        box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1); }
+        .menu .details__carte .details-choix .choix__prix {
+          position: relative; }
+          .menu .details__carte .details-choix .choix__prix h3 {
+            line-height: 3rem; }
+          .menu .details__carte .details-choix .choix__prix strong {
+            font-size: 1.5rem;
+            position: absolute;
+            right: 2rem;
+            bottom: 0; }
+        .menu .details__carte .details-choix .choix__confirm {
+          display: none; }
+  .menu .details .btn {
+    margin: 3rem auto;
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 50px;
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    padding: 1.5rem 5rem;
+    margin-bottom: 9rem; }
+    .menu .details .btn:hover {
+      opacity: 0.9;
+      box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.4); }
+
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #333333;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 992px) {
+    .footer {
+      flex-direction: row;
+      justify-content: space-around; } }
+  .footer__titre {
+    color: #fff;
+    font-family: 'Shrikhand', sans-serif;
+    letter-spacing: 0.1rem;
+    font-size: 2.1rem;
+    font-weight: 100;
+    padding: 1rem 0; }
+    @media (min-width: 992px) {
+      .footer__titre {
+        font-size: 2.5rem;
+        padding: 0; } }
+  .footer span {
+    padding: 0.8rem 0; }
+    @media (min-width: 992px) {
+      .footer span {
+        padding: 1.2rem 0rem 0rem 1.2rem;
+        border-left: 3px solid #fff;
+        text-align: end; } }
+    .footer span .fa-utensils {
+      color: #fff;
+      margin-right: 1.4rem;
+      font-size: 1.8rem; }
+    .footer span .fa-hands-helping {
+      color: #fff;
+      font-size: 1.3rem;
+      margin-right: 1.4rem; }
+  .footer a {
+    padding: 0.8rem 0;
+    color: #fff;
+    font-size: 1.8rem; }
+    @media (min-width: 992px) {
+      .footer a {
+        font-size: 1.9rem; } }
+
+.presentation {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  border-top: 0.4rem solid #d6d6d6; }
+  .presentation__bloc {
+    padding: 1.8rem;
+    background-color: #e6e6e6;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .presentation__bloc span {
+      font-size: 1.8rem;
+      margin-right: 1.5rem; }
+    .presentation__bloc p {
+      font-size: 1.6rem;
+      font-weight: bold; }
+  .presentation__reservation {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column; }
+    .presentation__reservation h1 {
+      font-size: 2.6rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 900;
+      padding: 1.2rem 2rem;
+      text-align: center; }
+    .presentation__reservation--text {
+      font-size: 1.8rem;
+      text-align: center; }
+    .presentation__reservation .btn-red {
+      margin: 3rem auto;
+      padding: 1.5rem 2rem;
+      font-size: 1.6rem;
+      font-family: 'Roboto', sans-serif;
+      border-radius: 50px;
+      border-style: none;
+      color: #fff;
+      cursor: pointer;
+      background: linear-gradient(#FF79DA, #9356DC);
+      box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
+      opacity: 1;
+      transition: all 0.3s ease-in-out; }
+      .presentation__reservation .btn-red:hover {
+        opacity: 0.9;
+        box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.4); }
+
+.fonctionnement {
+  width: 100%;
+  height: auto;
+  padding: 2rem 2rem 4rem; }
+  @media (min-width: 576px) {
+    .fonctionnement {
+      padding: 2rem 4rem 4rem; } }
+  @media (min-width: 768px) {
+    .fonctionnement {
+      display: flex;
+      flex-direction: row; } }
+  @media (min-width: 992px) {
+    .fonctionnement {
+      padding: 2rem;
+      flex-direction: column; } }
+  .fonctionnement__titre {
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    padding: 3rem 0;
+    text-align: left; }
+    @media (min-width: 768px) {
+      .fonctionnement__titre {
+        width: 40%; } }
+  .fonctionnement .etapes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    @media (min-width: 768px) {
+      .fonctionnement .etapes {
+        width: 60%;
+        align-items: flex-start;
+        margin-top: 3rem; } }
+    @media (min-width: 992px) {
+      .fonctionnement .etapes {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1rem; } }
+    .fonctionnement .etapes__box {
+      width: 98%;
+      height: 8rem;
+      background: whitesmoke;
+      border-radius: 2.5rem;
+      margin-bottom: 2.6rem;
+      box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      position: relative;
+      transition: all 0.3s ease-in-out; }
+      @media (min-width: 992px) {
+        .fonctionnement .etapes__box {
+          width: 30%; } }
+      .fonctionnement .etapes__box--etape {
+        font-size: 1.2rem;
+        padding: 0.5rem 0.8rem;
+        background-color: #9356DC;
+        border-radius: 5rem;
+        color: #fff;
+        position: absolute;
+        left: -1.2rem; }
+      .fonctionnement .etapes__box--text {
+        color: #000;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-left: 3rem; }
+        .fonctionnement .etapes__box--text span {
+          font-size: 2rem;
+          margin-right: 2rem; }
+      .fonctionnement .etapes__box:hover {
+        cursor: pointer;
+        background: #ffeefa;
+        box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.4); }
+        .fonctionnement .etapes__box:hover .fas, .fonctionnement .etapes__box:hover .far {
+          color: #9356DC; }
+
+.restaurants {
+  width: 100%;
+  height: auto;
+  padding: 2.4rem 2.4rem 6rem 2.4rem;
+  background-color: #f2f2f2; }
+  @media (min-width: 576px) {
+    .restaurants {
+      padding: 2.4rem 4rem 6rem; } }
+  .restaurants__titre {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #000;
+    font-size: 2.4rem;
+    padding: 3rem 0; }
+  .restaurants .restaux {
+    width: 100%;
+    height: auto; }
+    @media (min-width: 768px) {
+      .restaurants .restaux {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; } }
+    .restaurants .restaux__cartes {
+      width: 100%;
+      height: 26rem;
+      background-color: #fff;
+      border-radius: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1; }
+      .restaurants .restaux__cartes:hover {
+        box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.4); }
+      @media (min-width: 576px) {
+        .restaurants .restaux__cartes {
+          height: 32rem;
+          margin-bottom: 3.5rem; } }
+      @media (min-width: 768px) {
+        .restaurants .restaux__cartes {
+          width: 48%; } }
+      .restaurants .restaux__cartes--image img {
+        width: 100%;
+        height: 67%;
+        border-radius: 2rem 2rem 0 0;
+        object-fit: cover; }
+      .restaurants .restaux__cartes--info {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #278870;
+        padding: 0.8rem 1.4rem;
+        letter-spacing: 0.1rem;
+        background-color: #99E2D0;
+        border-radius: 0.3rem;
+        position: absolute;
+        top: 1.6rem;
+        right: 1.6rem; }
+      .restaurants .restaux__cartes--description {
+        padding: 1.5rem;
+        position: relative; }
+        .restaurants .restaux__cartes--description h3 {
+          font-size: 2rem;
+          font-weight: 900;
+          padding: 0.5rem 0; }
+        .restaurants .restaux__cartes--description p {
+          font-size: 1.8rem; }
+        .restaurants .restaux__cartes--description .fa-heart {
+          position: absolute;
+          top: 2.5rem;
+          right: 3rem;
+          font-size: 3rem;
+          font-weight: 100; }
+          .restaurants .restaux__cartes--description .fa-heart:hover {
+            cursor: pointer;
+            background-color: #9356DC; }
+
+.retour {
+  display: flex;
+  align-items: center; }
+  .retour a {
+    color: #000; }
+    .retour a span {
+      font-size: 2rem;
+      text-align: center;
+      margin-left: 3rem; }
+
+.footer {
+  position: relative;
+  bottom: 5rem; }
+
+/*# sourceMappingURL=style.css.map */

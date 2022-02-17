@@ -1,0 +1,119 @@
+
+.menu{
+     
+    .img-menu{
+      @include taille;
+
+        & img{
+           @include taille;
+            object-fit: cover;
+
+            @media (min-width: 992px) {
+               
+            }
+        }
+    }
+    
+    & .details {
+        @include taille;
+        background-color: $colorsite;
+        border-radius: 5rem 5rem 0 0;
+        position: relative;
+        // top: 5rem;
+        bottom: 5rem;
+        padding: 2rem 2rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       
+        &__titre{
+            @include taille;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 1rem 1rem 0;
+
+            @media (min-width: 768px){
+               padding: 2rem;
+               border-bottom: 3px solid $colorprez2;
+            }
+            & h1{
+                font-size: 2.6rem;
+                font-family: 'Shrikhand', sans-serif;                
+            }
+            & .fa-heart{
+                font-size: 2.5rem;
+                font-weight: 100; 
+            }
+        }
+
+        &__carte{
+            @include taille;
+            padding: 1rem 0;
+           
+            @media (min-width: 768px){
+                display: flex;
+                justify-content: center;
+                margin: 1.2rem 0;
+            }
+
+            & .choix-titre{
+                padding: 1.2rem;
+
+                @media (min-width: 768px){
+                    width: 30%;
+                }
+                & h2{
+                    font-size: 1.8rem;
+                    font-weight: 100;
+                    text-transform: uppercase;                    
+                }
+                & hr{
+                    height: 0.4rem;
+                    width: 5rem;
+                    background-color: $tertiaire;
+                    border-style: none;
+                    margin-top: 0.5rem;
+                }
+            }
+
+            & .details-choix{
+                @include taille;
+
+                @media (min-width: 768px){
+                    width: 60%;
+                }
+                & .choix{
+                    @include taille;
+                    background-color: #fff;
+                    padding: 1.2rem;
+                    border-radius: 1.5rem;
+                    margin: 1rem 0 1.5rem;
+                    @include shadow;
+
+                    &__prix{
+                        position: relative;
+
+                        & h3{
+                            line-height: 3rem;
+                        }
+                        & strong{
+                            font-size: 1.5rem;
+                            position: absolute;
+                            right: 2rem;
+                            bottom: 0;
+                        }
+                    }
+                    &__confirm{
+                        display: none;
+                    }
+                }
+            }   
+        }
+        & .btn{
+            @include btn;
+            padding: 1.5rem 5rem;
+            margin-bottom: 9rem;
+        }
+       
+    }
+}

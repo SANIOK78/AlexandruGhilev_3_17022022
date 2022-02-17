@@ -1,0 +1,240 @@
+
+.presentation{
+    @include bloc-center;
+    flex-direction: column;
+    background-color: $colorprez1;
+    border-top: 0.4rem solid $colorprez3;
+
+    &__bloc{       
+        padding: 1.8rem;
+        background-color: $colorprez2; 
+        @include bloc-center;
+
+        & span{
+            font-size: 1.8rem;
+            margin-right: 1.5rem;
+        }
+        & p{
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+    }
+
+    &__reservation{
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+
+        & h1{
+            font-size: 2.6rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            padding: 1.2rem 2rem;
+            text-align: center;
+        }
+        &--text{
+            font-size: 1.8rem;
+            text-align: center;    
+        }
+        & .btn-red{
+            @include btn;
+        }
+    }
+}
+
+// ***** Partie Fonctionnement *****
+
+.fonctionnement{
+    @include taille;
+    padding: 2rem 2rem 4rem;
+    
+    @media (min-width: 576px) {
+        padding: 2rem 4rem 4rem;
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
+       flex-direction: row;
+    }
+
+    @media (min-width: 992px) {
+        padding: 2rem ;
+        flex-direction: column;
+    }
+
+    &__titre{
+        font-size: 2.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        padding: 3rem 0;
+        text-align: left;
+        @media (min-width: 768px) {
+            width: 40%;
+        }
+       
+    }
+    & .etapes{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-end;
+
+        @media (min-width: 768px) {
+            width: 60%;
+            align-items: flex-start;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 992px) {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 1rem;
+
+        }
+        &__box{
+           width: 98%;
+           height: 8rem;
+           background: $colorsite;
+           border-radius: 2.5rem;
+           margin-bottom: 2.6rem;
+            @include shadow;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+
+            @media (min-width: 992px) {
+                width: 30%;
+            }
+
+            &--etape{
+                font-size: 1.2rem;
+                padding: 0.5rem 0.8rem;
+                background-color: $primaire;
+                border-radius: 5rem;
+                color: #fff;                
+                position: absolute;
+                left: -1.2rem;
+            }
+            &--text{
+                color: #000;
+                font-size: 1.6rem;
+                font-weight: 700;
+                margin-left: 3rem;
+                & span{
+                    font-size: 2rem;
+                    margin-right: 2rem;
+                }              
+            }
+            &:hover{
+                cursor: pointer;
+                background: lighten($secondaire, 23%);
+                @include shadow-hover;
+
+                & .fas, 
+                & .far{
+                    color: $primaire;
+                }
+            }
+        }  
+    }
+}
+
+// ***** Partie Restaurant ******
+
+.restaurants{
+    width: 100%;
+    height: auto;
+    padding: 2.4rem 2.4rem 6rem 2.4rem;
+    background-color: $colorprez1;
+
+    @media (min-width: 576px){
+        padding: 2.4rem 4rem 6rem;
+    }
+    &__titre {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        color:#000;
+        font-size: 2.4rem;
+        padding: 3rem 0;
+    }
+
+    .restaux{
+        @include taille;
+        
+        @media (min-width: 768px){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__cartes{
+            width: 100%;
+            height: 26rem;
+            background-color: #fff;
+            border-radius: 2rem;
+            margin-bottom: 2rem;
+            @include shadow;
+            position: relative;
+            z-index: 1;
+
+            &:hover{
+                @include shadow-hover;
+            }
+
+            @media (min-width: 576px){
+                height: 32rem;
+                margin-bottom: 3.5rem;
+            } 
+            @media (min-width: 768px) {
+                width: 48%;
+            }
+
+            &--image img{
+                width: 100%;
+                height: 67%;
+                border-radius: 2rem 2rem 0 0;
+                object-fit: cover;   
+            }
+            &--info {
+                font-size: 1.3rem;
+                font-weight: bold;
+                color: darken($tertiaire, 40%);
+                padding: 0.8rem 1.4rem;
+                letter-spacing: 0.1rem;
+                background-color: $tertiaire;
+                border-radius: 0.3rem;
+                position: absolute;
+                top: 1.6rem;
+                right: 1.6rem;
+            }
+            &--description{
+                padding: 1.5rem;
+                position: relative;
+
+                & h3{
+                    font-size: 2rem;
+                    font-weight: 900;
+                    padding: 0.5rem 0;
+                }
+                & p{
+                    font-size: 1.8rem;
+                }
+                & .fa-heart {
+                    position: absolute;
+                    top: 2.5rem;
+                    right: 3rem;
+                    font-size: 3rem;
+                    font-weight: 100;
+                                        
+                    &:hover{
+                        cursor: pointer;
+                        background-color: $primaire;
+                    }
+                }
+            }
+        }
+    }   
+}
+

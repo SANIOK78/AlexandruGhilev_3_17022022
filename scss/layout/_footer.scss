@@ -1,0 +1,62 @@
+//***** Partie Footer *****
+
+.footer{
+    width: 100%;
+    height:auto;
+    background-color: lighten(#000, 20%);
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 992px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    &__titre{
+        color:#fff;
+        font-family: 'Shrikhand', sans-serif;
+        letter-spacing: 0.1rem;
+        font-size: 2.1rem;
+        font-weight: 100;
+        padding: 1rem 0;
+
+        @media (min-width: 992px) {
+            font-size: 2.5rem;
+            padding: 0;
+        }
+    }
+
+    & span{
+        padding: 0.8rem 0;
+
+        @media (min-width: 992px) {
+            padding: 1.2rem 0rem 0rem 1.2rem;
+           border-left: 3px solid #fff;
+           text-align: end;
+        }
+
+        & .fa-utensils{
+            color: #fff;
+            margin-right: 1.4rem;
+            font-size: 1.8rem;    
+        }    
+    
+        & .fa-hands-helping{
+            color: #fff;
+            font-size: 1.3rem;
+            margin-right: 1.4rem;
+        }
+    }
+    & a {
+        padding: 0.8rem 0;
+        color: #fff;
+        font-size: 1.8rem;
+
+        @media (min-width: 992px) {
+            // padding: 0;
+            font-size: 1.9rem;
+        }
+      
+    }
+}

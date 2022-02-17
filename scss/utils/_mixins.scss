@@ -1,0 +1,39 @@
+@mixin bloc-center{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin shadow{
+    box-shadow: 0.1rem 0.5rem 0.8rem rgba(0,0,0, 0.1);
+}
+@mixin shadow-hover{
+    box-shadow: 0.1rem 0.5rem 0.8rem rgba(0,0,0, 0.4);
+}
+
+@mixin btn {
+    margin: 3rem auto;
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 50px;
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient($secondaire, $primaire); 
+    @include shadow;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover{
+        opacity: 0.9;
+        @include shadow-hover;
+    }
+}
+
+@mixin taille{
+    width: 100%;
+    height: auto;
+} 

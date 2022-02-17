@@ -1,0 +1,18 @@
+.retour{
+    display: flex;
+    align-items: center;
+
+    & a {
+        color: #000;
+        & span {
+            font-size: 2rem;
+            text-align: center;
+            margin-left: 3rem;
+        }
+    }   
+}
+
+.footer{
+    position: relative;
+    bottom: 5rem;
+}
