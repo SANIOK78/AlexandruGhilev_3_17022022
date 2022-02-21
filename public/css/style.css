@@ -1,29 +1,38 @@
 @keyframes fill {
   0% {
     transform: scale(0); }
-  10% {
-    color: #FF79DA;
-    transform: scale(0.1); }
-  15% {
-    color: #9356DC;
-    transform: scale(0.15); }
-  45% {
-    color: #FF79DA;
-    transform: scale(0.45); }
+  25% {
+    transform: scale(0.25);
+    -webkit-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -ms-transform: scale(0.25);
+    -o-transform: scale(0.25); }
   50% {
-    color: #9356DC;
-    transform: scale(0.5); }
-  70% {
-    color: #FF79DA;
-    transform: scale(0.7); }
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5); }
   75% {
-    color: #9356DC;
-    transform: scale(0.75); }
-  95% {
-    color: #FF79DA;
-    transform: scale(0.95); }
+    transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75); }
   100% {
-    transform: scale(1); } }
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1); } }
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none; } }
 *, *::after,
 *::before {
   margin: 0px;
@@ -140,17 +149,25 @@ a {
     background: linear-gradient(to bottom, #FF79DA 0%, #99E2D0 50%, #9356dc 100%); } }
 .menu .img-menu {
   width: 100%;
-  height: auto; }
+  height: 300px; }
+  @media (min-width: 576px) {
+    .menu .img-menu {
+      height: 100%; } }
+  @media (min-width: 768px) {
+    .menu .img-menu {
+      height: 500px; } }
   @media (min-width: 992px) {
     .menu .img-menu {
       height: 700px; } }
   .menu .img-menu img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover; }
-    @media (min-width: 992px) {
+    @media (min-width: 576px) {
       .menu .img-menu img {
-        height: 100%; } }
+        width: 100%;
+        height: 100%;
+        object-fit: cover; } }
 .menu .details {
   width: 100%;
   height: auto;
@@ -172,7 +189,15 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 1rem 1rem 1rem 0;
-    position: relative; }
+    position: relative;
+    opacity: 0;
+    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    animation: apparition 0.8s ease-out forwards;
+    -webkit-animation: apparition 0.8s ease-out forwards; }
     @media (min-width: 768px) {
       .menu .details__titre {
         padding: 2rem;
@@ -180,13 +205,14 @@ a {
     .menu .details__titre h1 {
       font-size: 2.6rem;
       font-family: 'Shrikhand', sans-serif; }
-    .menu .details__titre .heart {
+    .menu .details__titre .fa-heart {
+      display: inline-block;
       position: absolute;
       top: 2.5rem;
       right: 3rem;
       font-size: 3rem;
       font-weight: 100; }
-      .menu .details__titre .heart::after {
+      .menu .details__titre .fa-heart::after {
         content: "\f004";
         font-weight: bold;
         display: block;
@@ -203,10 +229,10 @@ a {
         -moz-transform: scale(0);
         -ms-transform: scale(0);
         -o-transform: scale(0); }
-      .menu .details__titre .heart:hover {
+      .menu .details__titre .fa-heart:hover {
         cursor: pointer;
         color: transparent; }
-      .menu .details__titre .heart:hover::after {
+      .menu .details__titre .fa-heart:hover::after {
         animation: fill 0.3s forwards;
         -webkit-animation: fill 0.3s forwards; }
   .menu .details__carte {
@@ -219,7 +245,15 @@ a {
         justify-content: center;
         margin: 1.2rem 0; } }
     .menu .details__carte .choix-titre {
-      padding: 1.2rem; }
+      padding: 1.2rem;
+      opacity: 0;
+      transform: translateX(-30px);
+      -webkit-transform: translateX(-30px);
+      -moz-transform: translateX(-30px);
+      -ms-transform: translateX(-30px);
+      -o-transform: translateX(-30px);
+      animation: apparition 0.8s ease-out forwards;
+      -webkit-animation: apparition 0.8s 0.2s ease-out forwards; }
       @media (min-width: 768px) {
         .menu .details__carte .choix-titre {
           width: 30%; } }
@@ -236,6 +270,15 @@ a {
     .menu .details__carte .details-choix {
       width: 100%;
       height: auto; }
+      .menu .details__carte .details-choix > .choix:nth-child(1) {
+        animation: apparition 0.8s 0.4s ease-out forwards;
+        -webkit-animation: apparition 0.8s 0.4s ease-out forwards; }
+      .menu .details__carte .details-choix > .choix:nth-child(2) {
+        animation: apparition 0.8s 0.4s ease-out forwards;
+        -webkit-animation: apparition 0.8s 0.6s ease-out forwards; }
+      .menu .details__carte .details-choix > .choix:nth-child(3) {
+        animation: apparition 0.8s 0.4s ease-out forwards;
+        -webkit-animation: apparition 0.8s 0.8s ease-out forwards; }
       @media (min-width: 768px) {
         .menu .details__carte .details-choix {
           width: 60%; } }
@@ -246,7 +289,13 @@ a {
         padding: 1.2rem;
         border-radius: 1.5rem;
         margin: 1rem 0 1.5rem;
-        box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1); }
+        box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translate(120px, 30px);
+        -webkit-transform: translate(120px, 30px);
+        -moz-transform: translate(120px, 30px);
+        -ms-transform: translate(120px, 30px);
+        -o-transform: translate(120px, 30px); }
         .menu .details__carte .details-choix .choix__prix {
           position: relative; }
           .menu .details__carte .details-choix .choix__prix h3 {
@@ -538,13 +587,13 @@ a {
           padding: 0.5rem 0; }
         .restaurants .restaux__cartes--description p {
           font-size: 1.8rem; }
-        .restaurants .restaux__cartes--description .heart {
+        .restaurants .restaux__cartes--description .fa-heart {
           position: absolute;
           top: 2.5rem;
           right: 3rem;
           font-size: 3rem;
           font-weight: 100; }
-          .restaurants .restaux__cartes--description .heart::after {
+          .restaurants .restaux__cartes--description .fa-heart::after {
             content: "\f004";
             font-weight: bold;
             display: block;
@@ -561,10 +610,10 @@ a {
             -moz-transform: scale(0);
             -ms-transform: scale(0);
             -o-transform: scale(0); }
-          .restaurants .restaux__cartes--description .heart:hover {
+          .restaurants .restaux__cartes--description .fa-heart:hover {
             cursor: pointer;
             color: transparent; }
-          .restaurants .restaux__cartes--description .heart:hover::after {
+          .restaurants .restaux__cartes--description .fa-heart:hover::after {
             animation: fill 0.3s forwards;
             -webkit-animation: fill 0.3s forwards; }
 
