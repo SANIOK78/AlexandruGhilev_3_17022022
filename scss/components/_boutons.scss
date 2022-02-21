@@ -1,3 +1,7 @@
 .btn{
     @include btn;
 }
+
+.fa-heart{
+    @include heart;
+}

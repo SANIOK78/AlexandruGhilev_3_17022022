@@ -1,15 +1,23 @@
 
 .menu{
-     
+    @media (min-width: 992px) {
+       
+        background: -moz-linear-gradient(top, #FF79DA 0%, #99E2D0 50%, #9356dc 100%);
+        background: -webkit-linear-gradient(top, #FF79DA 0%, #99E2D0 50%, #9356dc 100%);
+        background: linear-gradient(to bottom, #FF79DA 0%, #99E2D0 50%, #9356dc 100%);
+    } 
     .img-menu{
-      @include taille;
+        @include taille;
+
+        @media (min-width: 992px){
+            height: 700px; 
+        }
 
         & img{
            @include taille;
             object-fit: cover;
-
-            @media (min-width: 992px) {
-               
+            @media (min-width: 992px){
+                height: 100%; 
             }
         }
     }
@@ -19,30 +27,37 @@
         background-color: $colorsite;
         border-radius: 5rem 5rem 0 0;
         position: relative;
-        // top: 5rem;
-        bottom: 5rem;
+        bottom: 4rem;
         padding: 2rem 2rem 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
-       
+
+        @media (min-width: 992px) {
+            width: 992px;
+            margin: 0 auto;
+           
+        }
         &__titre{
             @include taille;
             display: flex;
             justify-content: space-between;
             padding: 1rem 1rem 1rem 0;
+            position: relative;
 
             @media (min-width: 768px){
                padding: 2rem;
                border-bottom: 3px solid $colorprez2;
             }
-            & h1{
+            h1{
                 font-size: 2.6rem;
                 font-family: 'Shrikhand', sans-serif;                
             }
-            & .fa-heart{
-                font-size: 2.5rem;
-                font-weight: 100; 
+            .heart{
+                // position: relative;
+                // // font-size: 2.5rem;
+                // // font-weight: 100; 
+                @include heart;
             }
         }
 
@@ -62,12 +77,12 @@
                 @media (min-width: 768px){
                     width: 30%;
                 }
-                & h2{
+                h2{
                     font-size: 1.8rem;
                     font-weight: 100;
                     text-transform: uppercase;                    
                 }
-                & hr{
+                hr{
                     height: 0.4rem;
                     width: 5rem;
                     background-color: $tertiaire;
@@ -93,10 +108,10 @@
                     &__prix{
                         position: relative;
 
-                        & h3{
+                        h3{
                             line-height: 3rem;
                         }
-                        & strong{
+                        strong{
                             font-size: 1.5rem;
                             position: absolute;
                             right: 2rem;
@@ -109,7 +124,7 @@
                 }
             }   
         }
-        & .btn{
+        .btn{
             @include btn;
             padding: 1.5rem 5rem;
             margin-bottom: 9rem;

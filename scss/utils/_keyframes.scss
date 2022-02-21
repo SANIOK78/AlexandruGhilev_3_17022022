@@ -1,0 +1,36 @@
+@keyframes fill {
+    0%{
+      transform: scale(0);  
+    }
+    10%{
+        color: #FF79DA;
+        transform: scale(0.1); 
+    }
+    15%{
+        color: #9356DC;
+        transform: scale(0.15); 
+    }
+    45%{
+        color: #FF79DA;
+        transform: scale(0.45); 
+    }
+    50%{
+        color: #9356DC;
+        transform: scale(0.5); 
+    } 
+    70%{
+        color: #FF79DA;
+        transform: scale(0.7); 
+    }
+    75%{
+        color: #9356DC;
+        transform: scale(0.75); 
+    }
+    95%{
+        color: #FF79DA;
+        transform: scale(0.95); 
+    }
+    100%{
+        transform: scale(1);    
+    }
+}
