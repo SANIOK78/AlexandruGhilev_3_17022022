@@ -10,7 +10,7 @@
     box-shadow: 0.1rem 0.5rem 0.8rem rgba(0,0,0, 0.1);
 }
 @mixin shadow-hover{
-    box-shadow: 0.1rem 0.5rem 0.8rem rgba(0,0,0, 0.4);
+    box-shadow: 0.2rem 0.8rem 1.2rem rgba(0,0,0, 0.5);
 }
 
 @mixin btn {
@@ -28,7 +28,7 @@
     transition: all 0.3s ease-in-out;
     
     &:hover{
-        opacity: 0.9;
+        opacity: 0.8;
         @include shadow-hover;
     }
 }
@@ -37,3 +37,38 @@
     width: 100%;
     height: auto;
 } 
+
+@mixin heart {
+    position: absolute;
+    top: 2.5rem;
+    right: 3rem;
+    font-size: 3rem;
+    font-weight: 100;
+
+    &::after {
+        content: "\f004";
+        font-weight: bold;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        color: #9356DC;
+        transform-origin: bottom;
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+}
+    &:hover{
+        cursor: pointer;
+        color: transparent;
+    }
+    &:hover::after{
+        animation: fill 0.3s forwards;
+        -webkit-animation: fill 0.3s forwards;
+    }
+}
