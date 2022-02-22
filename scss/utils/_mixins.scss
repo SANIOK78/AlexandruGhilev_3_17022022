@@ -10,7 +10,7 @@
     box-shadow: 0.1rem 0.5rem 0.8rem rgba(0,0,0, 0.1);
 }
 @mixin shadow-hover{
-    box-shadow: 0.2rem 0.8rem 1.2rem rgba(0,0,0, 0.5);
+    box-shadow: 0.2rem 0.8rem 1.2rem rgba(0,0,0, 0.4);
 }
 
 @mixin btn {
@@ -22,11 +22,15 @@
     border-style: none;
     color: #fff;
     cursor: pointer;
-    background: linear-gradient($secondaire, $primaire); 
+    background: linear-gradient($secondaire, $primaire);
     @include shadow;
     opacity: 1;
-    transition: all 0.3s ease-in-out;
-    
+    transition:  all 0.3s ease-in-out;
+    -webkit-transition:  all 0.3s ease-in-out;
+    -moz-transition:  all 0.3s ease-in-out;
+    -ms-transition:  all 0.3s ease-in-out;
+    -o-transition:  all 0.3s ease-in-out;
+
     &:hover{
         opacity: 0.8;
         @include shadow-hover;

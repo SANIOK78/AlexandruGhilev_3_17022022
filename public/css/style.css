@@ -83,10 +83,14 @@ a {
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
   opacity: 1;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out; }
   .btn:hover {
     opacity: 0.8;
-    box-shadow: 0.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.5); }
+    box-shadow: 0.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.4); }
 
 .fa-heart {
   position: absolute;
@@ -165,9 +169,8 @@ a {
     object-fit: cover; }
     @media (min-width: 576px) {
       .menu .img-menu img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; } }
+        background-position: bottom;
+        background-size: cover; } }
 .menu .details {
   width: 100%;
   height: auto;
@@ -320,11 +323,15 @@ a {
     box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
     opacity: 1;
     transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     padding: 1.5rem 5rem;
     margin-bottom: 9rem; }
     .menu .details .btn:hover {
       opacity: 0.8;
-      box-shadow: 0.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.5); }
+      box-shadow: 0.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.4); }
 
 .footer {
   width: 100%;
@@ -418,10 +425,14 @@ a {
       background: linear-gradient(#FF79DA, #9356DC);
       box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
       opacity: 1;
-      transition: all 0.3s ease-in-out; }
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out; }
       .presentation__reservation .btn-red:hover {
         opacity: 0.8;
-        box-shadow: 0.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.5); }
+        box-shadow: 0.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.4); }
 
 .fonctionnement {
   width: 100%;
@@ -499,7 +510,7 @@ a {
       .fonctionnement .etapes__box:hover {
         cursor: pointer;
         background: #ffeefa;
-        box-shadow: 0.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.5); }
+        box-shadow: 0.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.4); }
         .fonctionnement .etapes__box:hover .fas, .fonctionnement .etapes__box:hover .far {
           color: #9356DC; }
 
@@ -542,7 +553,7 @@ a {
       z-index: 1;
       transition: all 0.3s ease-in-out; }
       .restaurants .restaux__cartes:hover {
-        box-shadow: 0.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.5); }
+        box-shadow: 0.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.4); }
       @media (min-width: 576px) {
         .restaurants .restaux__cartes {
           height: 32rem;
