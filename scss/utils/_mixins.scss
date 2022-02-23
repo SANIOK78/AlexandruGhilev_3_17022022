@@ -20,7 +20,7 @@
     border-style: none;
     color: #fff;
     cursor: pointer;
-    background: linear-gradient($secondaire, $primaire);
+    background: $degrade;
     @include shadow;
     opacity: 1;
     transition:  all 0.3s ease-in-out;
