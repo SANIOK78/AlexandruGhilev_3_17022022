@@ -79,3 +79,16 @@
         -o-transform: rotate(360deg);
     }
 }
+
+// *** Animation 'poussé vers la gauche de prix' ***
+
+@keyframes prix {
+
+    100%{
+        transform: translate(-5.2rem, 0);
+        -webkit-transform: translate(-5.2rem, 0);
+        -moz-transform: translate(-5.2rem, 0);
+        -ms-transform: translate(-5.2rem, 0);
+        -o-transform: translate(-5.2rem, 0);
+}
+}
