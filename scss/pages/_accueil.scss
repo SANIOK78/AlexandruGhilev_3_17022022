@@ -9,6 +9,7 @@
         padding: 1.8rem;
         background-color: $colorprez2; 
         @include bloc-center;
+        @include taille;
 
         span{
             font-size: 1.8rem;
@@ -255,4 +256,7 @@
         }
     }   
 }
-
+.footer{
+    position: absolute;
+    bottom: 0rem;
+}

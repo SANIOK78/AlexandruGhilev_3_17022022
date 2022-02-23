@@ -33,6 +33,27 @@
     -moz-transform: none;
     -ms-transform: none;
     -o-transform: none; } }
+@keyframes choix {
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0); } }
+@keyframes rotate-check {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg); } }
 *, *::after,
 *::before {
   margin: 0px;
@@ -123,14 +144,8 @@ a {
     -webkit-animation: fill 0.3s forwards; }
 
 .container {
-  width: 100%; }
-  @media (max-width: 768px) {
-    .container {
-      width: 100%;
-      height: auto;
-      border: 1px solid red;
-      display: flex;
-      flex-direction: column; } }
+  width: 100%;
+  height: 100%; }
 
 .header {
   width: 100%;
@@ -167,10 +182,6 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover; }
-    @media (min-width: 576px) {
-      .menu .img-menu img {
-        background-position: bottom;
-        background-size: cover; } }
 .menu .details {
   width: 100%;
   height: auto;
@@ -282,10 +293,14 @@ a {
       .menu .details__carte .details-choix > .choix:nth-child(3) {
         animation: apparition 0.8s 0.4s ease-out forwards;
         -webkit-animation: apparition 0.8s 0.8s ease-out forwards; }
+      .menu .details__carte .details-choix > .choix:nth-child(4) {
+        animation: apparition 0.8s 0.4s ease-out forwards;
+        -webkit-animation: apparition 0.8s 0.7s ease-out forwards; }
       @media (min-width: 768px) {
         .menu .details__carte .details-choix {
           width: 60%; } }
       .menu .details__carte .details-choix .choix {
+        position: relative;
         width: 100%;
         height: auto;
         background-color: #fff;
@@ -298,18 +313,57 @@ a {
         -webkit-transform: translate(120px, 30px);
         -moz-transform: translate(120px, 30px);
         -ms-transform: translate(120px, 30px);
-        -o-transform: translate(120px, 30px); }
-        .menu .details__carte .details-choix .choix__prix {
-          position: relative; }
-          .menu .details__carte .details-choix .choix__prix h3 {
+        -o-transform: translate(120px, 30px);
+        display: flex;
+        justify-content: space-between; }
+        .menu .details__carte .details-choix .choix:hover {
+          cursor: pointer; }
+          .menu .details__carte .details-choix .choix:hover > .choix__confirm {
+            animation: choix 0.8s ease-out forwards;
+            -webkit-animation: choix 0.8s ease-out forwards; }
+            .menu .details__carte .details-choix .choix:hover > .choix__confirm .fa-check-circle {
+              animation: rotate-check 0.6s 0.2s linear 1;
+              -webkit-animation: rotate-check 0.6s 0.2s linear 1; }
+        .menu .details__carte .details-choix .choix__plat {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          width: 90%; }
+          .menu .details__carte .details-choix .choix__plat h3 {
             line-height: 3rem; }
-          .menu .details__carte .details-choix .choix__prix strong {
-            font-size: 1.5rem;
+          .menu .details__carte .details-choix .choix__plat .prix {
+            display: inline-block;
+            font-size: 1.6rem;
             position: absolute;
-            right: 2rem;
-            bottom: 0; }
+            bottom: 0;
+            right: 1rem;
+            width: 10%; }
         .menu .details__carte .details-choix .choix__confirm {
-          display: none; }
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          border-radius: 0 15px 15px 0;
+          background-color: #99E2D0;
+          height: 100%;
+          width: 15%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          -webkit-border-radius: 0 15px 15px 0;
+          -moz-border-radius: 0 15px 15px 0;
+          -ms-border-radius: 0 15px 15px 0;
+          -o-border-radius: 0 15px 15px 0;
+          opacity: 0;
+          transform: translate(2rem, 0);
+          -webkit-transform: translate(2rem, 0);
+          -moz-transform: translate(2rem, 0);
+          -ms-transform: translate(2rem, 0);
+          -o-transform: translate(2rem, 0); }
+          .menu .details__carte .details-choix .choix__confirm .fa-check-circle {
+            font-size: 2.5rem;
+            display: inline-block;
+            color: #fff; }
   .menu .details .btn {
     margin: 3rem auto;
     padding: 1.5rem 2rem;
@@ -378,8 +432,6 @@ a {
         font-size: 1.8rem; }
 
 .presentation {
-  width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -389,11 +441,11 @@ a {
   .presentation__bloc {
     padding: 1.8rem;
     background-color: #e6e6e6;
-    width: 100%;
-    height: auto;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    width: 100%;
+    height: auto; }
     .presentation__bloc span {
       font-size: 1.8rem;
       margin-right: 1.5rem; }
@@ -627,6 +679,10 @@ a {
           .restaurants .restaux__cartes--description .fa-heart:hover::after {
             animation: fill 0.3s forwards;
             -webkit-animation: fill 0.3s forwards; }
+
+.footer {
+  position: absolute;
+  bottom: 0rem; }
 
 .retour {
   display: flex;
