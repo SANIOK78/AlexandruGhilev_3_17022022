@@ -2,7 +2,11 @@
 
 @keyframes fill {
     0%{
-      transform: scale(0);  
+      transform: scale(0.1);
+      -webkit-transform: scale(0.1);
+      -moz-transform: scale(0.1);
+      -ms-transform: scale(0.1);
+      -o-transform: scale(0.1);  
     }
     25%{
         transform: scale(0.25);
@@ -10,13 +14,14 @@
         -moz-transform: scale(0.25);
         -ms-transform: scale(0.25);
         -o-transform: scale(0.25);
+       
     }
     50%{
         transform: scale(0.5);
         -webkit-transform: scale(0.5);
         -moz-transform: scale(0.5);
         -ms-transform: scale(0.5);
-        -o-transform: scale(0.5);
+        -o-transform: scale(0.5);   
     } 
     75%{
         transform: scale(0.75);
@@ -37,6 +42,7 @@
 // *** Animation 'apparition' cartes menu ****
 
 @keyframes apparition {
+  
     100% {
         opacity: 1;
         transform: none;

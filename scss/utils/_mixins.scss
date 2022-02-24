@@ -70,7 +70,7 @@
         color: transparent;
     }
     &:hover::after{
-        animation: fill 0.3s forwards;
-        -webkit-animation: fill 0.3s forwards;
-    }
+        animation: fill 0.3s both;
+        -webkit-animation: fill 0.3s both;
+}
 }
