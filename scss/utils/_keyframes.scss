@@ -90,5 +90,53 @@
         -moz-transform: translate(-5.2rem, 0);
         -ms-transform: translate(-5.2rem, 0);
         -o-transform: translate(-5.2rem, 0);
+    }
 }
+
+// *** Animation 'spiner' ***
+
+@keyframes spiner{
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+// *** Animation sur le text ***
+
+@keyframes flash{
+    0%{
+        color: #99e2d0;
+        text-shadow: 0 0 7px #99e2d0;
+    }
+    90%{
+        color: #9356dc;
+        text-shadow: none; 
+    }
+    100%{
+        color: #99e2d0;
+        text-shadow: 0 0 7px #99e2d0;
+    }
+}
+
+// *** Animation de disparition de chargement site
+
+@keyframes disparition{
+    100%{
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+    }
 }

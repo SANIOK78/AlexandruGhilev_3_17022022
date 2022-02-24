@@ -1,0 +1,94 @@
+.chargement{
+    font-family: 'Shrikhand', sans-serif;
+    letter-spacing: 0.3rem;
+    text-transform: initial;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(65deg, rgba(255,121,218,1) 1%, rgba(153,226,208,1) 55%);
+    opacity: 1;
+    z-index: 10;
+    color: #fff;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+    animation: disparition 0.2s 3s ease-in-out forwards;
+    -webkit-animation: disparition 0.2s 3s ease-in-out forwards;
+     
+    .loader{
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        border: 6px solid rgba(255,255,255,0.4);
+        margin-right: 2rem;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top:-6px;
+            right: -6px;
+            left: -6px;
+            bottom: -6px;
+            height: 40px;
+            width: 40px;
+            border: 6px solid transparent;
+            border-radius: 50px;
+            border-top-color: #fff;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+            animation: spiner 1s linear 3;
+            -webkit-animation: spiner 1s linear 3;
+        }
+    }
+    .lettre{
+        color: #9356dc;
+        font-size: 40px;
+        letter-spacing: 10px;
+        animation: flash 1s linear 3;
+        -webkit-animation: flash 1s linear 3;
+
+        &:nth-child(1){
+            animation-delay: 0.1s;
+        }
+        &:nth-child(2){
+            animation-delay: 0.2s;
+        }
+        &:nth-child(3){
+            animation-delay: 0.3s;
+        }
+        &:nth-child(4){
+            animation-delay: 0.4s;
+        }
+        &:nth-child(5){
+            animation-delay: 0.5s;
+        }
+        &:nth-child(6){
+            animation-delay: 0.6s;
+        }
+        &:nth-child(7){
+            animation-delay: 0.7s;
+        }
+        &:nth-child(8){
+            animation-delay: 0.8s;
+        }
+        &:nth-child(9){
+            animation-delay: 0.9s;
+        }
+        &:nth-child(10){
+            animation-delay: 1s;
+        }
+    }    
+}
