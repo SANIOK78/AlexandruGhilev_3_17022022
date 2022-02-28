@@ -40,37 +40,16 @@
     height: auto;
 } 
 
-@mixin heart {
+@mixin heart{
     position: absolute;
     top: 2.5rem;
     right: 3rem;
     font-size: 3rem;
-    font-weight: 100;
 
-    &::after {
-        content: "\f004";
-        font-weight: bold;
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        color: #9356DC;
-        transform-origin: bottom;
-        transform: scale(0);
-        -webkit-transform: scale(0);
-        -moz-transform: scale(0);
-        -ms-transform: scale(0);
-        -o-transform: scale(0);
-    }
     &:hover{
         cursor: pointer;
-        color: transparent;
+        font-weight: bold;
+        animation: like 0.4s ease-out forwards;
+        -webkit-animation: like 0.4s ease-out forwards;
     }
-    &:hover::after{
-        animation: fill 0.3s both;
-        -webkit-animation: fill 0.3s both;
-}
 }

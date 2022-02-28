@@ -31,7 +31,8 @@
         @include taille;
         background-color: $colorsite;
         position: relative;
-        bottom: 3rem;
+        // bottom: 3rem;
+        margin-top: -3rem;
         padding: 2rem 2rem 0;
         display: flex;
         flex-direction: column;
@@ -158,10 +159,20 @@
                     &:hover{
                         cursor: pointer;
 
-                        & > .choix__plat .prix{
-                            animation: prix 0.6s ease-out forwards;
-                            -webkit-animation: prix 0.6s ease-out forwards;
+                        & > .choix__plat {
+                            .prix{
+                                animation: prix 0.6s ease-out forwards;
+                                -webkit-animation: prix 0.6s ease-out forwards;
+                            }
+                            .plat {
+                                width: 70%;
+                                
+                            }
                         }
+
+
+                        
+                        
 
                         & > .choix__confirm{
                             animation: choix 0.6s ease-out forwards;
@@ -179,11 +190,38 @@
                         // position: relative;
                         display: flex;
                         justify-content: space-between;
-                        width: 90%;
-                        
-                        h3{                        
-                            line-height: 3rem;
+                        width: 100%;
+
+                        .plat{
+                            width: 90%;
+                            transition: width 0.3s;
+                            
+                            -webkit-transition: width 0.3s;
+                            -moz-transition: width 0.3s;
+                            -ms-transition: width 0.3s;
+                            -o-transition: width 0.3s;
+                            
+                            h3{ 
+
+                                line-height: 3rem;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis; 
+                            }
+    
+                            p {
+                                // position: relative;
+    
+                                // margin-right: 1rem;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis; 
+                                // resize: horizontal;                         
+                            }
                         }
+                        
+                        
+
                         .prix{
                             display: block;
                             font-size: 1.6rem;

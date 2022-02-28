@@ -1,34 +1,25 @@
-@keyframes fill {
+@keyframes like {
   0% {
-    transform: scale(0.1);
-    -webkit-transform: scale(0.1);
-    -moz-transform: scale(0.1);
-    -ms-transform: scale(0.1);
-    -o-transform: scale(0.1); }
-  25% {
-    transform: scale(0.25);
-    -webkit-transform: scale(0.25);
-    -moz-transform: scale(0.25);
-    -ms-transform: scale(0.25);
-    -o-transform: scale(0.25); }
-  50% {
-    transform: scale(0.5);
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    -o-transform: scale(0.5); }
-  75% {
-    transform: scale(0.75);
-    -webkit-transform: scale(0.75);
-    -moz-transform: scale(0.75);
-    -ms-transform: scale(0.75);
-    -o-transform: scale(0.75); }
+    background: linear-gradient(#fff 100%, #9356dc 0%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  10% {
+    background: linear-gradient(#fff 80%, #9356dc 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  40% {
+    background: linear-gradient(#fff 60%, #9356dc 40%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  80% {
+    background: linear-gradient(35deg, #FF79DA 22%, #9356dc 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
   100% {
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1); } }
+    /* font-weight: bold;  */
+    background: linear-gradient(15deg, #FF79DA 0%, #9356dc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; } }
 @keyframes apparition {
   100% {
     opacity: 1;
@@ -158,31 +149,12 @@ a {
   position: absolute;
   top: 2.5rem;
   right: 3rem;
-  font-size: 3rem;
-  font-weight: 100; }
-  .fa-heart::after {
-    content: "\f004";
-    font-weight: bold;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    color: #9356DC;
-    transform-origin: bottom;
-    transform: scale(0);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0); }
+  font-size: 3rem; }
   .fa-heart:hover {
     cursor: pointer;
-    color: transparent; }
-  .fa-heart:hover::after {
-    animation: fill 0.3s both;
-    -webkit-animation: fill 0.3s both; }
+    font-weight: bold;
+    animation: like 0.4s ease-out forwards;
+    -webkit-animation: like 0.4s ease-out forwards; }
 
 .chargement {
   font-family: 'Shrikhand', sans-serif;
@@ -306,7 +278,7 @@ a {
   height: auto;
   background-color: #F2F2F2;
   position: relative;
-  bottom: 3rem;
+  margin-top: -3rem;
   padding: 2rem 2rem 0;
   display: flex;
   flex-direction: column;
@@ -347,31 +319,12 @@ a {
       position: absolute;
       top: 2.5rem;
       right: 3rem;
-      font-size: 3rem;
-      font-weight: 100; }
-      .menu .details__titre .fa-heart::after {
-        content: "\f004";
-        font-weight: bold;
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        color: #9356DC;
-        transform-origin: bottom;
-        transform: scale(0);
-        -webkit-transform: scale(0);
-        -moz-transform: scale(0);
-        -ms-transform: scale(0);
-        -o-transform: scale(0); }
+      font-size: 3rem; }
       .menu .details__titre .fa-heart:hover {
         cursor: pointer;
-        color: transparent; }
-      .menu .details__titre .fa-heart:hover::after {
-        animation: fill 0.3s both;
-        -webkit-animation: fill 0.3s both; }
+        font-weight: bold;
+        animation: like 0.4s ease-out forwards;
+        -webkit-animation: like 0.4s ease-out forwards; }
   .menu .details__carte {
     width: 100%;
     height: auto;
@@ -444,6 +397,8 @@ a {
           .menu .details__carte .details-choix .choix:hover > .choix__plat .prix {
             animation: prix 0.6s ease-out forwards;
             -webkit-animation: prix 0.6s ease-out forwards; }
+          .menu .details__carte .details-choix .choix:hover > .choix__plat .plat {
+            width: 70%; }
           .menu .details__carte .details-choix .choix:hover > .choix__confirm {
             animation: choix 0.6s ease-out forwards;
             -webkit-animation: choix 0.6s ease-out forwards; }
@@ -453,9 +408,23 @@ a {
         .menu .details__carte .details-choix .choix__plat {
           display: flex;
           justify-content: space-between;
-          width: 90%; }
-          .menu .details__carte .details-choix .choix__plat h3 {
-            line-height: 3rem; }
+          width: 100%; }
+          .menu .details__carte .details-choix .choix__plat .plat {
+            width: 90%;
+            transition: width 0.3s;
+            -webkit-transition: width 0.3s;
+            -moz-transition: width 0.3s;
+            -ms-transition: width 0.3s;
+            -o-transition: width 0.3s; }
+            .menu .details__carte .details-choix .choix__plat .plat h3 {
+              line-height: 3rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            .menu .details__carte .details-choix .choix__plat .plat p {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
           .menu .details__carte .details-choix .choix__plat .prix {
             display: block;
             font-size: 1.6rem;
@@ -787,31 +756,12 @@ a {
           position: absolute;
           top: 2.5rem;
           right: 3rem;
-          font-size: 3rem;
-          font-weight: 100; }
-          .restaurants .restaux__cartes--description .fa-heart::after {
-            content: "\f004";
-            font-weight: bold;
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            z-index: -1;
-            color: #9356DC;
-            transform-origin: bottom;
-            transform: scale(0);
-            -webkit-transform: scale(0);
-            -moz-transform: scale(0);
-            -ms-transform: scale(0);
-            -o-transform: scale(0); }
+          font-size: 3rem; }
           .restaurants .restaux__cartes--description .fa-heart:hover {
             cursor: pointer;
-            color: transparent; }
-          .restaurants .restaux__cartes--description .fa-heart:hover::after {
-            animation: fill 0.3s both;
-            -webkit-animation: fill 0.3s both; }
+            font-weight: bold;
+            animation: like 0.4s ease-out forwards;
+            -webkit-animation: like 0.4s ease-out forwards; }
 
 .footer {
   position: absolute;
@@ -828,7 +778,6 @@ a {
       margin-left: 5rem; }
 
 .footer {
-  position: relative;
-  bottom: 3rem; }
+  position: relative; }
 
 /*# sourceMappingURL=style.css.map */
