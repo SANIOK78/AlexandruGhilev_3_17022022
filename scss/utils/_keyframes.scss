@@ -1,32 +1,31 @@
+
 // *** Animation 'remplissage' coeur
 
 @keyframes like {
     0%{
-        background: linear-gradient(#fff 100%, #9356dc 0%);
+        background: linear-gradient(#FF79DA 95%, #9356dc 5%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     10%{
-        background: linear-gradient( #fff 80%, #9356dc 20%);  
+        background: linear-gradient(#FF79DA 80%, #9356dc 20%);  
         -webkit-background-clip: text; 
         -webkit-text-fill-color: transparent; 
     }
-
     40%{
-        background: linear-gradient( #fff 60%, #9356dc 40%);   
+        background: linear-gradient(#FF79DA 50%, #9356dc 50%);   
         -webkit-background-clip: text; 
         -webkit-text-fill-color: transparent; 
     }
 
    80%{
-        background: linear-gradient(35deg, #FF79DA 22%, #9356dc 80%);      
+        background: linear-gradient(35deg, #FF79DA 20%, #9356dc 80%);      
         -webkit-background-clip: text; 
         -webkit-text-fill-color: transparent; 
     }
 
     100%{
-        /* font-weight: bold;  */
-        background: linear-gradient(15deg, #FF79DA 0%, #9356dc 100%);
+        background: linear-gradient(35deg, #FF79DA 1%, #9356dc 99%);
         -webkit-background-clip: text; 
         -webkit-text-fill-color: transparent; 
     } 
@@ -84,12 +83,12 @@
 @keyframes prix {
 
     100%{
-        transform: translate(-5.2rem, 0);
-        -webkit-transform: translate(-5.2rem, 0);
-        -moz-transform: translate(-5.2rem, 0);
-        -ms-transform: translate(-5.2rem, 0);
-        -o-transform: translate(-5.2rem, 0);
-    }
+        transform: translate(-5rem, 0);
+        -webkit-transform: translate(-5rem, 0);
+        -moz-transform: translate(-5rem, 0);
+        -ms-transform: translate(-5rem, 0);
+        -o-transform: translate(-5rem, 0);
+}
 }
 
 // *** Animation 'spiner' ***
@@ -131,6 +130,7 @@
 // *** Animation de disparition de chargement site
 
 @keyframes disparition{
+
     100%{
         transform: scale(0);
         -webkit-transform: scale(0);

@@ -1,13 +1,10 @@
 *, *::after,
-*::before {
+*::before, body {
     margin: 0px;
     padding: 0px;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
-body{
-    box-sizing: border-box;       
-}
 html{
     // 10px div by def of 16px
     font-size: 62.5%;

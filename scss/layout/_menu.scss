@@ -1,17 +1,18 @@
 
 .menu{
+    width: 100%;
+    height: 100%;
+
     @media (min-width: 992px) {       
-        background: -moz-linear-gradient(top, #FF79DA 0%, #99E2D0 50%, #9356dc 100%);
-        background: -webkit-linear-gradient(top, #FF79DA 0%, #99E2D0 50%, #9356dc 100%);
-        background: linear-gradient(to bottom, #FF79DA 0%, #99E2D0 50%, #9356dc 100%);
+        background: radial-gradient(circle,rgba(255,121,218, 0.5),  rgba(153,226,208, 0.5));                          
     }
 
     .img-menu{
         width: 100%;
-        height: 300px;
+        height: 100%;
 
         @media (min-width: 576px){
-            height: 100%; 
+            height: 400px; 
         }
         @media (min-width: 768px){
             height: 500px; 
@@ -20,7 +21,7 @@
             height: 700px; 
         }
 
-        & img{
+        .image{
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -31,7 +32,6 @@
         @include taille;
         background-color: $colorsite;
         position: relative;
-        // bottom: 3rem;
         margin-top: -3rem;
         padding: 2rem 2rem 0;
         display: flex;
@@ -45,7 +45,7 @@
 
         @media(min-width: 992px){ 
             width: 992px;
-            margin: 0 auto;   
+            margin: -3rem auto;   
         }
 
         &__titre{
@@ -95,12 +95,13 @@
                 -moz-transform: translateX(-30px);
                 -ms-transform: translateX(-30px);
                 -o-transform: translateX(-30px);
-                animation: apparition 0.8s ease-out forwards;
+                animation: apparition 0.8s 0.2s ease-out forwards;
                 -webkit-animation: apparition 0.8s 0.2s ease-out forwards;
 
-                @media (min-width: 768px){
+                @media(min-width: 768px){
                     width: 30%;
                 }
+
                 h2{
                     font-size: 1.8rem;
                     font-weight: 100;
@@ -165,21 +166,15 @@
                                 -webkit-animation: prix 0.6s ease-out forwards;
                             }
                             .plat {
-                                width: 70%;
-                                
+                                width: 75%;                                
                             }
                         }
-
-
-                        
-                        
-
+                                               
                         & > .choix__confirm{
                             animation: choix 0.6s ease-out forwards;
                             -webkit-animation: choix 0.6s ease-out forwards;
 
                             .fa-check-circle{
-
                                animation: rotate-check 0.4s 0.2s linear 1;
                                -webkit-animation: rotate-check 0.4s 0.2s linear 1;
                             }
@@ -187,22 +182,19 @@
                     }
 
                     &__plat{
-                        // position: relative;
                         display: flex;
                         justify-content: space-between;
                         width: 100%;
 
                         .plat{
                             width: 90%;
-                            transition: width 0.3s;
-                            
-                            -webkit-transition: width 0.3s;
-                            -moz-transition: width 0.3s;
-                            -ms-transition: width 0.3s;
-                            -o-transition: width 0.3s;
-                            
-                            h3{ 
+                            transition: width 0.3s ease-out;
+                            -webkit-transition: width 0.3s ease-out;
+                            -moz-transition: width 0.3s ease-out;
+                            -ms-transition: width 0.3s ease-out;
+                            -o-transition: width 0.3s ease-out;
 
+                            h3{ 
                                 line-height: 3rem;
                                 white-space: nowrap;
                                 overflow: hidden;
@@ -210,25 +202,19 @@
                             }
     
                             p {
-                                // position: relative;
-    
-                                // margin-right: 1rem;
                                 white-space: nowrap;
                                 overflow: hidden;
-                                text-overflow: ellipsis; 
-                                // resize: horizontal;                         
+                                text-overflow: ellipsis;                                                
                             }
                         }
-                        
-                        
-
+                                               
                         .prix{
+                            width: 10%;
                             display: block;
                             font-size: 1.6rem;
                             position: absolute;
                             bottom: 1.2rem;
-                            right: 0.5rem;
-                            width: 10%;
+                            right: 0.5rem;                            
                             transform: translate(0, 0);
                             -webkit-transform: translate(0, 0);
                             -moz-transform: translate(0, 0);
@@ -236,13 +222,12 @@
                             -o-transform: translate(0, 0);
 
                             @media (min-width: 768px){
-                                margin-right: 1rem;
+                                margin: 0 0.8rem;
                             }
                         }                        
                     }
 
-                    &__confirm{
-                        
+                    &__confirm{                       
                         position: absolute;
                         right: 0;
                         top: 0;

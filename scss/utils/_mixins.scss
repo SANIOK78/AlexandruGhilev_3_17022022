@@ -4,9 +4,15 @@
     align-items: center;
 }
 
+@mixin taille{
+    width: 100%;
+    height: auto;
+} 
+
 @mixin shadow{
     box-shadow: 0.1rem 0.5rem 0.8rem rgba(0,0,0, 0.1);
 }
+
 @mixin shadow-hover{
     box-shadow: 0.2rem 0.8rem 1.2rem rgba(0,0,0, 0.4);
 }
@@ -34,11 +40,6 @@
         @include shadow-hover;
     }
 }
-
-@mixin taille{
-    width: 100%;
-    height: auto;
-} 
 
 @mixin heart{
     position: absolute;

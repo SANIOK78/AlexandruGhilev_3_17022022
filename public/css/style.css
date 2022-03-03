@@ -1,23 +1,22 @@
 @keyframes like {
   0% {
-    background: linear-gradient(#fff 100%, #9356dc 0%);
+    background: linear-gradient(#FF79DA 95%, #9356dc 5%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   10% {
-    background: linear-gradient(#fff 80%, #9356dc 20%);
+    background: linear-gradient(#FF79DA 80%, #9356dc 20%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   40% {
-    background: linear-gradient(#fff 60%, #9356dc 40%);
+    background: linear-gradient(#FF79DA 50%, #9356dc 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   80% {
-    background: linear-gradient(35deg, #FF79DA 22%, #9356dc 80%);
+    background: linear-gradient(35deg, #FF79DA 20%, #9356dc 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   100% {
-    /* font-weight: bold;  */
-    background: linear-gradient(15deg, #FF79DA 0%, #9356dc 100%);
+    background: linear-gradient(35deg, #FF79DA 1%, #9356dc 99%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; } }
 @keyframes apparition {
@@ -51,11 +50,11 @@
     -o-transform: rotate(360deg); } }
 @keyframes prix {
   100% {
-    transform: translate(-5.2rem, 0);
-    -webkit-transform: translate(-5.2rem, 0);
-    -moz-transform: translate(-5.2rem, 0);
-    -ms-transform: translate(-5.2rem, 0);
-    -o-transform: translate(-5.2rem, 0); } }
+    transform: translate(-5rem, 0);
+    -webkit-transform: translate(-5rem, 0);
+    -moz-transform: translate(-5rem, 0);
+    -ms-transform: translate(-5rem, 0);
+    -o-transform: translate(-5rem, 0); } }
 @keyframes spiner {
   0% {
     transform: rotate(0deg);
@@ -87,12 +86,9 @@
     -ms-transform: scale(0);
     -o-transform: scale(0); } }
 *, *::after,
-*::before {
+*::before, body {
   margin: 0px;
   padding: 0px;
-  box-sizing: inherit; }
-
-body {
   box-sizing: border-box; }
 
 html {
@@ -159,7 +155,6 @@ a {
 .chargement {
   font-family: 'Shrikhand', sans-serif;
   letter-spacing: 0.3rem;
-  text-transform: initial;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -167,7 +162,7 @@ a {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(65deg, #ff79da 1%, #99e2d0 55%);
+  background: linear-gradient(35deg, #ff79da 1%, #99e2d0 55%);
   opacity: 1;
   z-index: 10;
   color: #fff;
@@ -236,7 +231,7 @@ a {
 
 .container {
   width: 100%;
-  height: 100%; }
+  height: auto; }
 
 .header {
   width: 100%;
@@ -252,242 +247,243 @@ a {
       .header--img {
         width: 25%; } }
 
-@media (min-width: 992px) {
-  .menu {
-    background: -moz-linear-gradient(top, #FF79DA 0%, #99E2D0 50%, #9356dc 100%);
-    background: -webkit-linear-gradient(top, #FF79DA 0%, #99E2D0 50%, #9356dc 100%);
-    background: linear-gradient(to bottom, #FF79DA 0%, #99E2D0 50%, #9356dc 100%); } }
-.menu .img-menu {
+.menu {
   width: 100%;
-  height: 300px; }
-  @media (min-width: 576px) {
-    .menu .img-menu {
-      height: 100%; } }
-  @media (min-width: 768px) {
-    .menu .img-menu {
-      height: 500px; } }
+  height: 100%; }
   @media (min-width: 992px) {
-    .menu .img-menu {
-      height: 700px; } }
-  .menu .img-menu img {
+    .menu {
+      background: radial-gradient(circle, rgba(255, 121, 218, 0.5), rgba(153, 226, 208, 0.5)); } }
+  .menu .img-menu {
     width: 100%;
-    height: 100%;
-    object-fit: cover; }
-.menu .details {
-  width: 100%;
-  height: auto;
-  background-color: #F2F2F2;
-  position: relative;
-  margin-top: -3rem;
-  padding: 2rem 2rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 3rem 3rem 0 0;
-  -webkit-border-radius: 3rem 3rem 0 0;
-  -moz-border-radius: 3rem 3rem 0 0;
-  -ms-border-radius: 3rem 3rem 0 0;
-  -o-border-radius: 3rem 3rem 0 0; }
-  @media (min-width: 992px) {
-    .menu .details {
-      width: 992px;
-      margin: 0 auto; } }
-  .menu .details__titre {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 1rem 1rem 0;
-    position: relative;
-    opacity: 0;
-    transform: translateY(-30px);
-    -webkit-transform: translateY(-30px);
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    -o-transform: translateY(-30px);
-    animation: apparition 0.6s ease-out forwards;
-    -webkit-animation: apparition 0.6s ease-out forwards; }
+    height: 100%; }
+    @media (min-width: 576px) {
+      .menu .img-menu {
+        height: 400px; } }
     @media (min-width: 768px) {
-      .menu .details__titre {
-        padding: 2rem;
-        border-bottom: 3px solid #e6e6e6; } }
-    .menu .details__titre h1 {
-      font-size: 2.6rem;
-      font-family: 'Shrikhand', sans-serif; }
-    .menu .details__titre .fa-heart {
-      display: inline-block;
-      position: absolute;
-      top: 2.5rem;
-      right: 3rem;
-      font-size: 3rem; }
-      .menu .details__titre .fa-heart:hover {
-        cursor: pointer;
-        font-weight: bold;
-        animation: like 0.4s ease-out forwards;
-        -webkit-animation: like 0.4s ease-out forwards; }
-  .menu .details__carte {
-    width: 100%;
-    height: auto;
-    padding: 1rem 0; }
-    @media (min-width: 768px) {
-      .menu .details__carte {
-        display: flex;
-        justify-content: center;
-        margin: 1.2rem 0; } }
-    .menu .details__carte .choix-titre {
-      padding: 1.2rem;
-      opacity: 0;
-      transform: translateX(-30px);
-      -webkit-transform: translateX(-30px);
-      -moz-transform: translateX(-30px);
-      -ms-transform: translateX(-30px);
-      -o-transform: translateX(-30px);
-      animation: apparition 0.8s ease-out forwards;
-      -webkit-animation: apparition 0.8s 0.2s ease-out forwards; }
-      @media (min-width: 768px) {
-        .menu .details__carte .choix-titre {
-          width: 30%; } }
-      .menu .details__carte .choix-titre h2 {
-        font-size: 1.8rem;
-        font-weight: 100;
-        text-transform: uppercase; }
-      .menu .details__carte .choix-titre hr {
-        height: 0.4rem;
-        width: 5rem;
-        background-color: #99E2D0;
-        border-style: none;
-        margin-top: 0.5rem; }
-    .menu .details__carte .details-choix {
+      .menu .img-menu {
+        height: 500px; } }
+    @media (min-width: 992px) {
+      .menu .img-menu {
+        height: 700px; } }
+    .menu .img-menu .image {
       width: 100%;
-      height: auto; }
-      .menu .details__carte .details-choix > .choix:nth-child(1) {
-        animation: apparition 0.8s 0.4s ease-out forwards;
-        -webkit-animation: apparition 0.8s 0.4s ease-out forwards; }
-      .menu .details__carte .details-choix > .choix:nth-child(2) {
-        animation: apparition 0.8s 0.4s ease-out forwards;
-        -webkit-animation: apparition 0.8s 0.5s ease-out forwards; }
-      .menu .details__carte .details-choix > .choix:nth-child(3) {
-        animation: apparition 0.8s 0.4s ease-out forwards;
-        -webkit-animation: apparition 0.8s 0.6s ease-out forwards; }
-      .menu .details__carte .details-choix > .choix:nth-child(4) {
-        animation: apparition 0.8s 0.4s ease-out forwards;
-        -webkit-animation: apparition 0.8s 0.7s ease-out forwards; }
+      height: 100%;
+      object-fit: cover; }
+  .menu .details {
+    width: 100%;
+    height: auto;
+    background-color: #F2F2F2;
+    position: relative;
+    margin-top: -3rem;
+    padding: 2rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 3rem 3rem 0 0;
+    -webkit-border-radius: 3rem 3rem 0 0;
+    -moz-border-radius: 3rem 3rem 0 0;
+    -ms-border-radius: 3rem 3rem 0 0;
+    -o-border-radius: 3rem 3rem 0 0; }
+    @media (min-width: 992px) {
+      .menu .details {
+        width: 992px;
+        margin: -3rem auto; } }
+    .menu .details__titre {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 1rem 1rem 0;
+      position: relative;
+      opacity: 0;
+      transform: translateY(-30px);
+      -webkit-transform: translateY(-30px);
+      -moz-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+      -o-transform: translateY(-30px);
+      animation: apparition 0.6s ease-out forwards;
+      -webkit-animation: apparition 0.6s ease-out forwards; }
       @media (min-width: 768px) {
-        .menu .details__carte .details-choix {
-          width: 60%; } }
-      .menu .details__carte .details-choix .choix {
-        position: relative;
-        width: 100%;
-        height: auto;
-        background-color: #fff;
-        padding: 1.2rem;
-        border-radius: 1.5rem;
-        margin: 1rem 0 1.5rem;
-        box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        transform: translateY(30px);
-        -webkit-transform: translateY(30px);
-        -moz-transform: translateY(30px);
-        -ms-transform: translateY(30px);
-        -o-transform: translateY(30px);
-        display: flex;
-        justify-content: space-between; }
-        .menu .details__carte .details-choix .choix:hover {
-          cursor: pointer; }
-          .menu .details__carte .details-choix .choix:hover > .choix__plat .prix {
-            animation: prix 0.6s ease-out forwards;
-            -webkit-animation: prix 0.6s ease-out forwards; }
-          .menu .details__carte .details-choix .choix:hover > .choix__plat .plat {
-            width: 70%; }
-          .menu .details__carte .details-choix .choix:hover > .choix__confirm {
-            animation: choix 0.6s ease-out forwards;
-            -webkit-animation: choix 0.6s ease-out forwards; }
-            .menu .details__carte .details-choix .choix:hover > .choix__confirm .fa-check-circle {
-              animation: rotate-check 0.4s 0.2s linear 1;
-              -webkit-animation: rotate-check 0.4s 0.2s linear 1; }
-        .menu .details__carte .details-choix .choix__plat {
-          display: flex;
-          justify-content: space-between;
-          width: 100%; }
-          .menu .details__carte .details-choix .choix__plat .plat {
-            width: 90%;
-            transition: width 0.3s;
-            -webkit-transition: width 0.3s;
-            -moz-transition: width 0.3s;
-            -ms-transition: width 0.3s;
-            -o-transition: width 0.3s; }
-            .menu .details__carte .details-choix .choix__plat .plat h3 {
-              line-height: 3rem;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis; }
-            .menu .details__carte .details-choix .choix__plat .plat p {
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis; }
-          .menu .details__carte .details-choix .choix__plat .prix {
-            display: block;
-            font-size: 1.6rem;
-            position: absolute;
-            bottom: 1.2rem;
-            right: 0.5rem;
-            width: 10%;
-            transform: translate(0, 0);
-            -webkit-transform: translate(0, 0);
-            -moz-transform: translate(0, 0);
-            -ms-transform: translate(0, 0);
-            -o-transform: translate(0, 0); }
-            @media (min-width: 768px) {
-              .menu .details__carte .details-choix .choix__plat .prix {
-                margin-right: 1rem; } }
-        .menu .details__carte .details-choix .choix__confirm {
-          position: absolute;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          border-radius: 0 15px 15px 0;
-          background-color: #99E2D0;
-          height: 100%;
-          width: 15%;
+        .menu .details__titre {
+          padding: 2rem;
+          border-bottom: 3px solid #e6e6e6; } }
+      .menu .details__titre h1 {
+        font-size: 2.6rem;
+        font-family: 'Shrikhand', sans-serif; }
+      .menu .details__titre .fa-heart {
+        display: inline-block;
+        position: absolute;
+        top: 2.5rem;
+        right: 3rem;
+        font-size: 3rem; }
+        .menu .details__titre .fa-heart:hover {
+          cursor: pointer;
+          font-weight: bold;
+          animation: like 0.4s ease-out forwards;
+          -webkit-animation: like 0.4s ease-out forwards; }
+    .menu .details__carte {
+      width: 100%;
+      height: auto;
+      padding: 1rem 0; }
+      @media (min-width: 768px) {
+        .menu .details__carte {
           display: flex;
           justify-content: center;
-          align-items: center;
-          -webkit-border-radius: 0 15px 15px 0;
-          -moz-border-radius: 0 15px 15px 0;
-          -ms-border-radius: 0 15px 15px 0;
-          -o-border-radius: 0 15px 15px 0;
+          margin: 1.2rem 0; } }
+      .menu .details__carte .choix-titre {
+        padding: 1.2rem;
+        opacity: 0;
+        transform: translateX(-30px);
+        -webkit-transform: translateX(-30px);
+        -moz-transform: translateX(-30px);
+        -ms-transform: translateX(-30px);
+        -o-transform: translateX(-30px);
+        animation: apparition 0.8s 0.2s ease-out forwards;
+        -webkit-animation: apparition 0.8s 0.2s ease-out forwards; }
+        @media (min-width: 768px) {
+          .menu .details__carte .choix-titre {
+            width: 30%; } }
+        .menu .details__carte .choix-titre h2 {
+          font-size: 1.8rem;
+          font-weight: 100;
+          text-transform: uppercase; }
+        .menu .details__carte .choix-titre hr {
+          height: 0.4rem;
+          width: 5rem;
+          background-color: #99E2D0;
+          border-style: none;
+          margin-top: 0.5rem; }
+      .menu .details__carte .details-choix {
+        width: 100%;
+        height: auto; }
+        .menu .details__carte .details-choix > .choix:nth-child(1) {
+          animation: apparition 0.8s 0.4s ease-out forwards;
+          -webkit-animation: apparition 0.8s 0.4s ease-out forwards; }
+        .menu .details__carte .details-choix > .choix:nth-child(2) {
+          animation: apparition 0.8s 0.4s ease-out forwards;
+          -webkit-animation: apparition 0.8s 0.5s ease-out forwards; }
+        .menu .details__carte .details-choix > .choix:nth-child(3) {
+          animation: apparition 0.8s 0.4s ease-out forwards;
+          -webkit-animation: apparition 0.8s 0.6s ease-out forwards; }
+        .menu .details__carte .details-choix > .choix:nth-child(4) {
+          animation: apparition 0.8s 0.4s ease-out forwards;
+          -webkit-animation: apparition 0.8s 0.7s ease-out forwards; }
+        @media (min-width: 768px) {
+          .menu .details__carte .details-choix {
+            width: 60%; } }
+        .menu .details__carte .details-choix .choix {
+          position: relative;
+          width: 100%;
+          height: auto;
+          background-color: #fff;
+          padding: 1.2rem;
+          border-radius: 1.5rem;
+          margin: 1rem 0 1.5rem;
+          box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
           opacity: 0;
-          transform: translate(2rem, 0);
-          -webkit-transform: translate(2rem, 0);
-          -moz-transform: translate(2rem, 0);
-          -ms-transform: translate(2rem, 0);
-          -o-transform: translate(2rem, 0); }
-          .menu .details__carte .details-choix .choix__confirm .fa-check-circle {
-            font-size: 2.5rem;
-            display: inline-block;
-            color: #fff; }
-  .menu .details .btn {
-    margin: 3rem auto;
-    padding: 1.5rem 2rem;
-    font-size: 1.6rem;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 50px;
-    border-style: none;
-    color: #fff;
-    cursor: pointer;
-    background: linear-gradient(165deg, #ff79da 0%, #9356dc 100%);
-    box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    padding: 1.5rem 5rem;
-    margin-bottom: 9rem; }
-    .menu .details .btn:hover {
-      opacity: 0.8;
-      box-shadow: 0.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.4); }
+          transform: translateY(30px);
+          -webkit-transform: translateY(30px);
+          -moz-transform: translateY(30px);
+          -ms-transform: translateY(30px);
+          -o-transform: translateY(30px);
+          display: flex;
+          justify-content: space-between; }
+          .menu .details__carte .details-choix .choix:hover {
+            cursor: pointer; }
+            .menu .details__carte .details-choix .choix:hover > .choix__plat .prix {
+              animation: prix 0.6s ease-out forwards;
+              -webkit-animation: prix 0.6s ease-out forwards; }
+            .menu .details__carte .details-choix .choix:hover > .choix__plat .plat {
+              width: 75%; }
+            .menu .details__carte .details-choix .choix:hover > .choix__confirm {
+              animation: choix 0.6s ease-out forwards;
+              -webkit-animation: choix 0.6s ease-out forwards; }
+              .menu .details__carte .details-choix .choix:hover > .choix__confirm .fa-check-circle {
+                animation: rotate-check 0.4s 0.2s linear 1;
+                -webkit-animation: rotate-check 0.4s 0.2s linear 1; }
+          .menu .details__carte .details-choix .choix__plat {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; }
+            .menu .details__carte .details-choix .choix__plat .plat {
+              width: 90%;
+              transition: width 0.3s ease-out;
+              -webkit-transition: width 0.3s ease-out;
+              -moz-transition: width 0.3s ease-out;
+              -ms-transition: width 0.3s ease-out;
+              -o-transition: width 0.3s ease-out; }
+              .menu .details__carte .details-choix .choix__plat .plat h3 {
+                line-height: 3rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+              .menu .details__carte .details-choix .choix__plat .plat p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+            .menu .details__carte .details-choix .choix__plat .prix {
+              width: 10%;
+              display: block;
+              font-size: 1.6rem;
+              position: absolute;
+              bottom: 1.2rem;
+              right: 0.5rem;
+              transform: translate(0, 0);
+              -webkit-transform: translate(0, 0);
+              -moz-transform: translate(0, 0);
+              -ms-transform: translate(0, 0);
+              -o-transform: translate(0, 0); }
+              @media (min-width: 768px) {
+                .menu .details__carte .details-choix .choix__plat .prix {
+                  margin: 0 0.8rem; } }
+          .menu .details__carte .details-choix .choix__confirm {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 0 15px 15px 0;
+            background-color: #99E2D0;
+            height: 100%;
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-border-radius: 0 15px 15px 0;
+            -moz-border-radius: 0 15px 15px 0;
+            -ms-border-radius: 0 15px 15px 0;
+            -o-border-radius: 0 15px 15px 0;
+            opacity: 0;
+            transform: translate(2rem, 0);
+            -webkit-transform: translate(2rem, 0);
+            -moz-transform: translate(2rem, 0);
+            -ms-transform: translate(2rem, 0);
+            -o-transform: translate(2rem, 0); }
+            .menu .details__carte .details-choix .choix__confirm .fa-check-circle {
+              font-size: 2.5rem;
+              display: inline-block;
+              color: #fff; }
+    .menu .details .btn {
+      margin: 3rem auto;
+      padding: 1.5rem 2rem;
+      font-size: 1.6rem;
+      font-family: 'Roboto', sans-serif;
+      border-radius: 50px;
+      border-style: none;
+      color: #fff;
+      cursor: pointer;
+      background: linear-gradient(165deg, #ff79da 0%, #9356dc 100%);
+      box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      padding: 1.5rem 5rem;
+      margin-bottom: 9rem; }
+      .menu .details .btn:hover {
+        opacity: 0.8;
+        box-shadow: 0.2rem 0.8rem 1.2rem rgba(0, 0, 0, 0.4); }
 
 .footer {
   width: 100%;
