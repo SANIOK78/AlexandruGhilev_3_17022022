@@ -3,17 +3,17 @@
 
 @keyframes like {
     0%{
-        background: linear-gradient(#FF79DA 95%, #9356dc 5%);
+        background: linear-gradient(#fff 95%, #9356dc 5%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     10%{
-        background: linear-gradient(#FF79DA 80%, #9356dc 20%);  
+        background: linear-gradient(#fff 80%, #9356dc 20%);  
         -webkit-background-clip: text; 
         -webkit-text-fill-color: transparent; 
     }
     40%{
-        background: linear-gradient(#FF79DA 50%, #9356dc 50%);   
+        background: linear-gradient(#fff 50%, #9356dc 50%);   
         -webkit-background-clip: text; 
         -webkit-text-fill-color: transparent; 
     }
